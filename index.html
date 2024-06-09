@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hehe Studio</title>
+    <title>hehe Studio</title>  
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+<!-- mwnu -->
+<div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+</div>
+  
+<header>
+  <h1>hehe Studio</h1>
+  <nav>
+    <a href="javascript:void(0)" onclick="openNav()">Menu</a>
+  </nav>
+</header>
+<main>
+  <section id="hero">
+    <h2>Creative Design Solutions</h2>
+    <p>Bringing your ideas to life with personalized, creative designs.</p>
+  </section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a team of passionate designers dedicated to creating the most effective and striking designs for our clients.</p>
+  </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>From branding to web design, we offer a wide range of services to help your business stand out.</p>
+  </section>
+  <section id="portfolio">
+    <h2>Our Work</h2>
+    <p>Take a look at some of our recent projects.</p>
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a project in mind? Let's talk.</p>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2023 hehe Studio</p>
+</footer>
+<!-- Use any element to open/show the overlay navigation menu -->
+<span style="cursor:pointer" onclick="openNav()">open</span>
+
+<script src="js\script.js"></script>
 </body>
 </html>

@@ -1,0 +1,166 @@
+/* Reset default styles */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set font and background color */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Example background color for contrast */
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+header h1, header nav a {
+    color: white;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Adjust the size as needed */
+    margin-right: auto; /* Ensures h1 is aligned to the left */
+}
+
+nav {
+    margin-left: auto; /* Ensures nav is aligned to the right */
+}
+
+nav a {
+    font-size: 1.2rem; /* Adjust the size as needed */
+    margin: 0 10px; /* Gives some space around the menu items */
+}
+
+/* Additional styles for the overlay content to ensure consistency */
+.overlay-content a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust the size as needed */
+}
+
+/* Style the main sections */
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Hero section styles */
+#hero {
+  background-color: #eee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style the main content */
+main {
+  margin: 20px;
+}
+
+/* Style headings */
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style paragraphs */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Style links */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Overlay Full-Screen Style */
+.overlay {
+  height: 100%;
+  width: 100%; /* Cover the full width initially */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: opacity 0.5s ease; /* Transition for opacity */
+  opacity: 0; /* Start fully transparent */
+  pointer-events: none; /* Prevents click events when overlay is not visible */
+}
+
+/* Overlay Content Style */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text */
+  margin-top: 30px; /* 30px top margin */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Example background color for contrast */
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+}
+
+/* Overlay Content Links Style */
+.overlay-content a {
+  font-size: 1.2rems; /* Bigger font size */
+  font-weight: bold; /* Make text bold */
+  display: block; /* Each link will take its own line */
+  margin: 20px 0; /* Add vertical space between links */
+  text-transform: uppercase; /* Optional: UPPERCASE letters */
+  color: #fff; /* White text color */
+}
+
+/* Fade in the overlay */
+.overlay-open {
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Enable click events */
+}
+
+/* Fade out the overlay */
+.overlay-close {
+  opacity: 0; /* Fully transparent */
+  pointer-events: none; /* Prevents click events when overlay is not visible */
+}
+
+/* Button to close the overlay navigation */
+.closebtn {
+  position: absolute; /* Position it relative to the overlay */
+  top: 20px; /* 20px from the top */
+  right: 45px; /* 45px from the right */
+  font-size: 40px; /* Bigger font size */
+  color: #fff; /* White color */
+  cursor: pointer; /* Change cursor on hover */
+}
+
