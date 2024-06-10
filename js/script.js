@@ -1,19 +1,18 @@
 function openNav() {
   var menu = document.getElementById("myMenu");
-  // Check if menu is already displayed
   if (menu.style.display === "none" || menu.style.display === "") {
-    menu.style.display = "flex"; // Use flex to utilize CSS centering
+    menu.style.display = "flex";
     requestAnimationFrame(() => {
-      menu.style.opacity = "1"; // Fade in
+      menu.style.opacity = "1";
     });
   }
 }
 
 function closeNav() {
   var menu = document.getElementById("myMenu");
-  menu.style.opacity = "0"; // Fade out
+  menu.style.opacity = "0";
   menu.addEventListener('transitionend', function handler() {
-    menu.style.display = "none"; // Hide after transition
+    menu.style.display = "none";
     menu.removeEventListener('transitionend', handler);
   }, { once: true });
 }
