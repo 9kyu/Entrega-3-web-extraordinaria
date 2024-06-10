@@ -1,166 +1,114 @@
 /* Reset default styles */
-body, h1, p {
-  margin: 0;
-  padding: 0;
+body, h1, p, header, footer {
+    margin: 0;
+    padding: 0;
 }
-
-/* Set font and background color */
+/* Set font, background color, and ensure the body doesn't overflow horizontally */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-
+/* Video section */
+#video-section {
+    position: relative;
+    width: 100vw; /* Ensure it spans the full viewport width */
+    height: 100vh; /* Ensure it spans the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Ensure text is visible over a dark video */
+}
+.video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Ensure text is visible over a dark video */
+    z-index: 2; /* Ensure text appears above the video */
+}
+.video-text h2 {
+    font-size: 3rem; /* Increase font size */
+    margin-bottom: 0.5em; /* Adjust spacing as needed */
+}
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    object-fit: cover; /* Cover the entire area without stretching */
+    z-index: -1;
+}
 header {
+    position: fixed; /* Keep it at the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    width: 100%; /* Span the full width of the viewport */
+    background-color: transparent; /* Remove the translucent background */
+    color: white; /* Ensure text color contrasts with the background */
+    z-index: 1002; /* High z-index to ensure it's above other content */
+    padding: 2rem 4rem; /* Add some vertical padding and padding to both sides */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: #333; /* Example background color for contrast */
-    padding: 20px 0; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensure padding does not affect the total width */
 }
-
-header h1, header nav a {
+#myMenu {
+    display: none; /* Initial state hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
     color: white;
-    font-weight: bold;
+    z-index: 1001;
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
 }
-
-header h1 {
-    font-size: 2.5rem; /* Adjust the size as needed */
-    margin-right: auto; /* Ensures h1 is aligned to the left */
-}
-
-nav {
-    margin-left: auto; /* Ensures nav is aligned to the right */
-}
-
-nav a {
-    font-size: 1.2rem; /* Adjust the size as needed */
-    margin: 0 10px; /* Gives some space around the menu items */
-}
-
-/* Additional styles for the overlay content to ensure consistency */
-.overlay-content a {
+#myMenu a {
+    display: block;
+    margin: 20px 0;
+    font-size: 2rem;
+    text-align: center;
     color: white;
-    font-weight: bold;
-    font-size: 1.2rem; /* Adjust the size as needed */
+    text-decoration: none;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
 }
 
-/* Style the main sections */
-section {
-  padding: 20px;
-  margin-bottom: 20px;
+.menu-button {
+    background: none; /* Removes the background */
+    border: none; /* Removes the border */
+    padding: 0; /* Adjust padding as needed */
+    margin: 0; /* Adjust margin as needed */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
 }
 
-/* Hero section styles */
-#hero {
-  background-color: #eee;
-  padding: 50px 20px;
-  text-align: center;
+.menu-button i {
+  color: white; /* Change the icon color to white */
+  font-size: 30px; /* Increase the font size to make the icon larger */
 }
 
-/* Footer styles */
+/* Add footer styles here, ensuring it's at the bottom and only visible when scrolling */
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    /* Removed fixed positioning to ensure it's part of the normal document flow */
 }
-
-/* Style the main content */
-main {
-  margin: 20px;
-}
-
-/* Style headings */
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* Style paragraphs */
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-/* Style links */
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Overlay Full-Screen Style */
-.overlay {
-  height: 100%;
-  width: 100%; /* Cover the full width initially */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-color: rgba(0,0,0, 0.9);
-  overflow-x: hidden;
-  transition: opacity 0.5s ease; /* Transition for opacity */
-  opacity: 0; /* Start fully transparent */
-  pointer-events: none; /* Prevents click events when overlay is not visible */
-}
-
-/* Overlay Content Style */
-.overlay-content {
-  position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text */
-  margin-top: 30px; /* 30px top margin */
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333; /* Example background color for contrast */
-    padding: 20px 0; /* Adjust padding as needed */
-  }
-}
-
-/* Overlay Content Links Style */
-.overlay-content a {
-  font-size: 1.2rems; /* Bigger font size */
-  font-weight: bold; /* Make text bold */
-  display: block; /* Each link will take its own line */
-  margin: 20px 0; /* Add vertical space between links */
-  text-transform: uppercase; /* Optional: UPPERCASE letters */
-  color: #fff; /* White text color */
-}
-
-/* Fade in the overlay */
-.overlay-open {
-  opacity: 1; /* Fully visible */
-  pointer-events: auto; /* Enable click events */
-}
-
-/* Fade out the overlay */
-.overlay-close {
-  opacity: 0; /* Fully transparent */
-  pointer-events: none; /* Prevents click events when overlay is not visible */
-}
-
-/* Button to close the overlay navigation */
-.closebtn {
-  position: absolute; /* Position it relative to the overlay */
-  top: 20px; /* 20px from the top */
-  right: 45px; /* 45px from the right */
-  font-size: 40px; /* Bigger font size */
-  color: #fff; /* White color */
-  cursor: pointer; /* Change cursor on hover */
-}
-

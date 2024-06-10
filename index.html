@@ -1,61 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hehe Studio</title>  
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hehe Studio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-<!-- mwnu -->
-<div id="myNav" class="overlay">
-
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   
-    <!-- Overlay content -->
-    <div class="overlay-content">
+  <header>
+    <h1>hehe Studio</h1>
+    <nav id="myMenu" style="display:none;">
+      <span class="close-btn" onclick="closeNav()">&times;</span>
+      <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Services</a>
-      <a href="#">Clients</a>
       <a href="#">Contact</a>
-    </div>
-</div>
+    </nav>
+    <button onclick="openNav()" class="menu-button"><i class="fa-sharp fa-solid fa-bars"></i></button>
+  </header>
   
-<header>
-  <h1>hehe Studio</h1>
-  <nav>
-    <a href="javascript:void(0)" onclick="openNav()">Menu</a>
-  </nav>
-</header>
-<main>
-  <section id="hero">
-    <h2>Creative Design Solutions</h2>
-    <p>Bringing your ideas to life with personalized, creative designs.</p>
+  <section id="video-section">
+    <video autoplay muted loop id="bg-video">
+      <source src="images/coverr-hands-opening-a-record-player-6754-1080p.mp4" type="video/mp4">
+    </video>
+    <div class="video-text">
+      <h2>Creative Design Solutions</h2>
+      <p>Bringing your ideas to life with personalized, creative designs.</p>
+    </div>
   </section>
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are a team of passionate designers dedicated to creating the most effective and striking designs for our clients.</p>
-  </section>
-  <section id="services">
-    <h2>Our Services</h2>
-    <p>From branding to web design, we offer a wide range of services to help your business stand out.</p>
-  </section>
-  <section id="portfolio">
-    <h2>Our Work</h2>
-    <p>Take a look at some of our recent projects.</p>
-  </section>
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Have a project in mind? Let's talk.</p>
-  </section>
-</main>
-<footer>
-  <p>&copy; 2023 hehe Studio</p>
-</footer>
-<!-- Use any element to open/show the overlay navigation menu -->
-<span style="cursor:pointer" onclick="openNav()">open</span>
-
-<script src="js\script.js"></script>
+  <footer>
+    <p>&copy; 2023 hehe Studio</p>
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/6bddb0cd07.js" crossorigin="anonymous"></script>
 </body>
 </html>

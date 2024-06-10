@@ -1,9 +1,19 @@
 function openNav() {
-  document.getElementById("myNav").style.opacity = "1";
-  document.getElementById("myNav").style.pointerEvents = "auto";
+  var menu = document.getElementById("myMenu");
+  // Check if menu is already displayed
+  if (menu.style.display === "none" || menu.style.display === "") {
+    menu.style.display = "flex"; // Use flex to utilize CSS centering
+    requestAnimationFrame(() => {
+      menu.style.opacity = "1"; // Fade in
+    });
+  }
 }
 
 function closeNav() {
-  document.getElementById("myNav").style.opacity = "0";
-  document.getElementById("myNav").style.pointerEvents = "none";
+  var menu = document.getElementById("myMenu");
+  menu.style.opacity = "0"; // Fade out
+  menu.addEventListener('transitionend', function handler() {
+    menu.style.display = "none"; // Hide after transition
+    menu.removeEventListener('transitionend', handler);
+  }, { once: true });
 }
