@@ -1,114 +1,88 @@
 /* Reset default styles */
-body, h1, p, header, footer {
-    margin: 0;
-    padding: 0;
+body, h1, p, footer {
+  margin: 0;
+  padding: 0;
 }
+
 /* Set font, background color, and ensure the body doesn't overflow horizontally */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  overflow-x: hidden;
 }
+
 /* Video section */
 #video-section {
-    position: relative;
-    width: 100vw; /* Ensure it spans the full viewport width */
-    height: 100vh; /* Ensure it spans the full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white; /* Ensure text is visible over a dark video */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
+
 .video-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white; /* Ensure text is visible over a dark video */
-    z-index: 2; /* Ensure text appears above the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
+
 .video-text h2 {
-    font-size: 3rem; /* Increase font size */
-    margin-bottom: 0.5em; /* Adjust spacing as needed */
+  font-size: 3rem;
+  margin-bottom: 0.5em;
 }
+
 #bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    object-fit: cover; /* Cover the entire area without stretching */
-    z-index: -1;
-}
-header {
-    position: fixed; /* Keep it at the top */
-    top: 0; /* Align to the top of the viewport */
-    left: 0; /* Align to the left of the viewport */
-    width: 100%; /* Span the full width of the viewport */
-    background-color: transparent; /* Remove the translucent background */
-    color: white; /* Ensure text color contrasts with the background */
-    z-index: 1002; /* High z-index to ensure it's above other content */
-    padding: 2rem 4rem; /* Add some vertical padding and padding to both sides */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box; /* Ensure padding does not affect the total width */
-}
-#myMenu {
-    display: none; /* Initial state hidden */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-    color: white;
-    z-index: 1001;
-    opacity: 0; /* Start fully transparent */
-    transition: opacity 0.5s ease; /* Smooth transition for opacity */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically center */
-    align-items: center; /* Horizontally center */
-}
-#myMenu a {
-    display: block;
-    margin: 20px 0;
-    font-size: 2rem;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-}
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.menu-button {
-    background: none; /* Removes the background */
-    border: none; /* Removes the border */
-    padding: 0; /* Adjust padding as needed */
-    margin: 0; /* Adjust margin as needed */
-    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+/* Navbar styles */
+.navbar {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  color: #fff; /* Ensures all text in the navbar is white */
 }
 
-.menu-button i {
-  color: white; /* Change the icon color to white */
-  font-size: 30px; /* Increase the font size to make the icon larger */
+.navbar-brand {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
 }
 
-/* Add footer styles here, ensuring it's at the bottom and only visible when scrolling */
+.navbar a, .navbar-brand {
+  color: #fff !important; /* Make text white */
+  font-weight: bold !important; /* Make text bold */
+  font-size: 2rem !important; /* Increase text size */
+}
+
+.navbar a:hover {
+  color: #cccccc; /* Lighter shade for hover state */
+  text-decoration: underline; /* Underline text to indicate interactivity */
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: normal;
+}
+
+/* Footer styles */
 footer {
-    text-align: center;
-    width: 100%;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    /* Removed fixed positioning to ensure it's part of the normal document flow */
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
 }
