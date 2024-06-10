@@ -1,5 +1,5 @@
 /* Reset default styles */
-body, h1, p, footer {
+body {
   margin: 0;
   padding: 0;
 }

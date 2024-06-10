@@ -1,7 +1,9 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: white !important;
+    background-color: transparent !important;
+    background-image: none;
+
 }
 
 /* Navbar styles adjustment */
@@ -16,6 +18,7 @@ footer {
 #contact-section {
     padding: 2rem 0; /* Top and bottom padding */
     margin-top: 2rem; /* Space from the navbar */
+    padding-bottom: 10rem !important;
 }
 
 .container {
