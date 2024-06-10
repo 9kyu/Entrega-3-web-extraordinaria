@@ -50,4 +50,16 @@ body {
 .ver-mas:hover {
     background-color: #000000;
     color: #ffffff;
+
+}@media (max-width: 768px) {
+    .card {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .card {
+        margin: 20px;
+    }
 }

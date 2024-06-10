@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda - hehe Studio</title>
     <link rel="stylesheet" href="css/styles.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/tienda.css">
@@ -26,6 +27,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -35,14 +39,14 @@
             <h2 id="mas-populares" class="text-center">Nuestros más vendidos:</h2>
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" data-product-id="0">
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/61KOUtpr0BL._UXNaN_FMjpg_QL85_.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Fancy Product</h5>
+                                <h5 class="fw-bolder">12 Atentados - Nerve Agent</h5>
                                 <!-- Product price-->
                                 15.00€
                             </div>
@@ -54,21 +58,17 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" data-product-id="1" >
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/614MgYpU2LL._UX358_FMwebp_QL85_.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Special Item</h5>
+                                <h5 class="fw-bolder">Dejad Ke los Niños Se Acerquen a Nerve Agent</h5>
                                 <!-- Product reviews-->
                                 <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
+
                                 </div>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through"></span>
@@ -82,14 +82,14 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" data-product-id="2">
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/51B5RJJM0qL._UX358_FMwebp_QL85_.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Sale Item</h5>
+                                <h5 class="fw-bolder">Puta Ripagaña</h5>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through"></span>
                                 12.00€
@@ -102,21 +102,17 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" data-product-id="3">
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/517CPO45IbL._UX358_FMwebp_QL85_.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Popular Item</h5>
+                                <h5 class="fw-bolder">Fuera de Agusto - Nerve Agent</h5>
                                 <!-- Product reviews-->
                                 <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
+
                                 </div>
                                 <!-- Product price-->
                                 14.00€
@@ -129,14 +125,14 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" data-product-id="4">
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/51rtvCB+8WL._UX358_FMwebp_QL85_.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Fancy Product</h5>
+                                <h5 class="fw-bolder">Turboviolencia - VVV [Trippin'you]</h5>
                                 <!-- Product price-->
                                 15.00€
                             </div>
@@ -148,21 +144,16 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" data-product-id="5">
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/51h+zdQjiFL._UX358_FMwebp_QL85_.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Special Item</h5>
+                                <h5 class="fw-bolder">Sabotaje - Rodol VX</h5>
                                 <!-- Product reviews-->
                                 <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
                                 </div>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through"></span>
@@ -176,14 +167,14 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" data-product-id="6">
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/410ej+Jz1UL._UX358_FMwebp_QL85_.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Sale Item</h5>
+                                <h5 class="fw-bolder">Dios me tiró un ducados rubio - Mala Gestion</h5>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through"></span>
                                 12.00€
@@ -196,21 +187,18 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" data-product-id="7"> 
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/41jDSZuJcaL._UXNaN_FMwebp_QL85_.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Popular Item</h5>
+                                <h5 class="fw-bolder">Sonido de Barra de Metal Cayendo al Suelo (Remix) - Mala Gestion
+                                </h5>
                                 <!-- Product reviews-->
                                 <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
+
                                 </div>
                                 <!-- Product price-->
                                 16.00€
