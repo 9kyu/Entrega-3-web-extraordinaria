@@ -1,0 +1,203 @@
+/* Reset default styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set font, background color, and ensure the body doesn't overflow horizontally */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%); 
+  z-index: 5;
+}
+
+/* Video section */
+#video-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: left;
+}
+
+.video-text h2 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  cursor: pointer; 
+}
+
+.hover-text {
+  margin-top: 0%;
+  display: flex;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out; 
+  color: #fff; 
+  font-weight: lighter;
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.video-text h2:hover .hover-text {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex ;
+  padding: 200px; /* Adjust this value as needed */
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  color: #fff;
+}
+
+.navbar-light .navbar-toggler-icon {
+  filter: invert(1); /* Invert the color of the hamburger icon */
+}
+
+.navbar-brand {
+  font-size: 3rem !important; /* Increase font size */
+  color: #fff; 
+  font-weight: bold; 
+}
+
+.navbar-brand:hover {
+  text-decoration: underline !important;
+ }
+
+.navbar a, .navbar-brand {
+  color: #fff !important; /* Make text white */
+  font-weight: bold !important; /* Make text bold */
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.navbar a:hover {
+  color: #cccccc; 
+  text-decoration:wavy; 
+}
+
+.navbar-nav .nav-link .navbar-brand {
+  color: #fff;
+  font-weight: normal !important; /* Start with normal font weight */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  transform: scale(1.05); /* Slightly scale text to simulate bold effect */
+  font-weight: bold !important; /* Make text bold on hover */
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 2rem 1rem; /* Increased padding for a larger footer */
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); /* Transparent gradient */
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.footer-links,
+.footer-social {
+  margin: 1rem 0;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #cccccc;
+}
+
+.footer-location {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 769px) {
+  /* Increase specificity by repeating the class */
+  .video-text.video-text h2 {
+    font-size: 3rem !important; /* Adjusted font size for mobile screens */
+  }
+
+  .video-text {
+    font-size: 2rem !important;
+  }
+
+  .hover-text {
+    font-size: 2rem; /* Adjusted font size for mobile screens */
+  }
+
+  .navbar a, .navbar-brand {
+    font-size: 1.2rem; /* Adjust navbar link sizes for mobile */
+    margin-right: 0.5rem; /* Adjust margin for compact spacing */
+  }
+}
+
+/* Tablet devices (up to 768px) */
+@media (min-width: 769px) {
+  .video-text h2 {
+    font-size: 4rem; /* Slightly reduce the font size */
+  }
+
+  .hover-text {
+    font-size: 2.5rem; /* Adjust hover text size for readability */
+  }
+
+  .nav-link {
+    padding: 100px 1rem; /* Reduce padding and adjust navbar link sizes */
+    font-size: 1.5rem;
+    margin: -0.5rem 0.5rem;
+  }
+
+}
+
